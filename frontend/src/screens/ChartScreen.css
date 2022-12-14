@@ -1,0 +1,144 @@
+.productscreen {
+    margin-left: 100px;
+    max-width: 1300px;
+    margin-top: 10px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.loading__animation{
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+}
+
+
+.productscreen__right{
+    flex: 1;
+    padding: 1rem;
+}
+
+
+.productscreen__left {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.left__image{
+    margin: 1rem;
+    flex:1;
+    text-align: center;
+
+}
+
+.chart__detailslink{
+    text-align: center;
+}
+
+.left__info{
+    margin-right: 10px;
+    margin-left: 10px;
+    flex:1;
+    background: white;
+    height: fit-content;
+    font-size: 0.9rem;
+}
+
+
+.left__name{
+    font-weight: bold;
+    font-size: 1 rem;
+}
+
+.left__infoprop{
+    color: darkblue;
+    font-size: 0.9 rem;
+    font-weight: normal;
+}
+
+.left__info > p,
+.right__info > p{
+    padding: 0.9rem;
+    border-bottom: 1px solid rgba(0, 0,0, 0.2);
+    margin-right: 10px;
+}
+
+.left__info > p:last-child,
+.right__info > p:last-child{
+    border: none;
+
+}
+
+
+.right__info{
+    width: 100%;
+    background: white;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+.right__info > p{
+    padding: 1rem;
+    font-size: 0.8rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+}
+
+.right__info p > button{
+    grid-column: 1/-1;
+    padding: 10px 16px;
+    background: black;
+    color: white;
+    border: 1px solid black;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.right__info select{
+    padding: 10px 16px;
+}
+
+
+@media (max-width: 950px){
+    .productscreen{
+        max-width: 1300px;
+        margin-top: 5px;
+        margin-left: 2px;
+        margin-right: 2px;
+        margin-bottom: 10px;
+    
+    }
+
+    .left__info{
+        font-size: 0.65rem;
+    }
+
+    .left__image{
+        flex:1;
+        text-align: center;
+        font-size: 0.7rem;
+    
+    }
+
+    .chart__detailslink{
+        text-align: center;
+        font-size: 0.7rem;
+    }
+
+    .left__info{
+        max-width: 500px;
+    }
+
+    .chart__maincontainer{
+        margin: 0px 0px 0px 0px;
+        padding: none;
+    }
+    
+    
+    
+
+}

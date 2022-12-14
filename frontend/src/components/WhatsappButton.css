@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+
+.whatsappButton{
+    position:fixed;
+    width:80px;
+    height:80px;
+    background:transparent;
+    right:9px;
+    bottom:100px;
+    cursor: pointer;
+    z-index: 50;
+}
+
+.whatsappButton:hover,
+.info__button:focus{
+    transform: scale(1.10);
+    transition: all 0.2s ease-out;
+}
+
+
+@media(max-width: 600px){
+    .whatsappButton{
+        width:45px;
+        height:45px;
+        right:3px;
+        bottom:30px;
+    }
+
+}
