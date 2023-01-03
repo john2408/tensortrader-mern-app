@@ -32,19 +32,19 @@ const SideDrawer = ({show, click}) => {
                     </Link>
                 </li>
                 <li>
-                    <Link to="/" >
-                    <i className='fa-solid fa-chart-pie'></i>
-                    <span>
-                        Performance
-                    </span>
+                    <Link to="/trading/" >
+                        <i className='fa-solid fa-chart-line'></i>
+                        <span>
+                            ML Trader 
+                        </span>
                     </Link>
                 </li>
                 <li>
-                    <Link to="/trading/" >
-                    <i className='fa-solid fa-chart-line'></i>
-                    <span>
-                        Binance Bots 
-                    </span>
+                    <Link to="/performance/" >
+                        <i className='fa-solid fa-chart-pie'></i>
+                        <span>
+                            Performance
+                        </span>
                     </Link>
                 </li>
             </ul>

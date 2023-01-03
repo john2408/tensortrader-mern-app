@@ -27,11 +27,14 @@ const TableScreen = () => {
   const main_screen = true
 
   /*
-  <Table 
-    chart_id = {id}
-    trade_info = {trades}
-    main_screen = {main_screen}
-    />
+
+  
+
+          <Table 
+            chart_id = {id}
+            trade_info = {trades}
+            main_screen = {main_screen}
+            />
   */
 
   return <div className='homescreen'>
@@ -41,10 +44,11 @@ const TableScreen = () => {
                   {loading ? <h2>Loading...</h2> 
                     : error ? <h2> {error} </h2>
                     :   
-                        <ReactTable
-                          chart_id = {id}
-                          trade_info = {trades}
-                        />     
+                    <ReactTable
+                      key = {id}
+                      chart_id = {id}
+                      trade_info = {trades}
+                    /> 
                   }   
                 </div>   
               </div>              

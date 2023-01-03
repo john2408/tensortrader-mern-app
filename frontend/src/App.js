@@ -13,6 +13,7 @@ import Sidemenu from './components/Sidemenu';
 import HomeScreen from './screens/HomeScreen';
 import ChartScreen from './screens/ChartScreen';
 import TableScreen from './screens/TableScreen';
+import PerformanceScreen from './screens/PerformanceScreen';
 
 
 
@@ -33,6 +34,7 @@ function App() {
         <Switch>
           <Route exact path = "/" component={HomeScreen}/>
           <Route exact path = "/trading/" component={TableScreen}/>
+          <Route exact path = "/performance/" component={PerformanceScreen}/>
           <Route exact path = "/backtest/:id" component={ChartScreen}/>
         </Switch>
       

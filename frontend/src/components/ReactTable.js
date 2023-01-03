@@ -8,6 +8,9 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 
+import {getTableHeaders} from "./utils.js";
+
+
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
     backgroundColor: theme.palette.common.black,
@@ -28,42 +31,55 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
   },
 }));
 
-function createData(name, calories, fat, carbs, protein) {
-  return { name, calories, fat, carbs, protein };
-}
+/*
+  const headers = [
+    'trading_session_id',
+    'tradeid',
+    'trade_orderID',
+    'trade_qty',
+    'trade_base_unit',
+    'trade_profit',
+    'trade_entry_time',
+    'trade_entry_price',
+    'cum_profits',
+    'signal',
+    'side'
+  ];
+*/
 
-const rows = [
-  createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
-  createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
-  createData('Eclair', 262, 16.0, 24, 6.0),
-  createData('Cupcake', 305, 3.7, 67, 4.3),
-  createData('Gingerbread', 356, 16.0, 49, 3.9),
-];
+const ReactTable = ({chart_id, trade_info}) => {
 
-const ReactTable = (chart_id, trade_info) => {
+  const headers = getTableHeaders(trade_info);
+
+  console.log("Data is: ")
+  console.log(trade_info)
+
 
   return (
-    <TableContainer component={Paper}>
+    <TableContainer component={Paper} key = {chart_id} >
       <Table sx={{ minWidth: 700 }} aria-label="customized table">
         <TableHead>
           <TableRow>
-            <StyledTableCell>Dessert (100g serving)</StyledTableCell>
-            <StyledTableCell align="right">Calories</StyledTableCell>
-            <StyledTableCell align="right">Fat&nbsp;(g)</StyledTableCell>
-            <StyledTableCell align="right">Carbs&nbsp;(g)</StyledTableCell>
-            <StyledTableCell align="right">Protein&nbsp;(g)</StyledTableCell>
+              {headers.map( (head) => 
+                      <StyledTableCell key = {head}>
+                      {head}
+                      </StyledTableCell>)}
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map((row) => (
-            <StyledTableRow key={row.name}>
-              <StyledTableCell component="th" scope="row">
-                {row.name}
-              </StyledTableCell>
-              <StyledTableCell align="right">{row.calories}</StyledTableCell>
-              <StyledTableCell align="right">{row.fat}</StyledTableCell>
-              <StyledTableCell align="right">{row.carbs}</StyledTableCell>
-              <StyledTableCell align="right">{row.protein}</StyledTableCell>
+          {trade_info.map((row) => (
+            <StyledTableRow key={row.trade_orderID}>
+              <StyledTableCell component="th" scope="row">{row.trading_session_id}</StyledTableCell>
+              <StyledTableCell align="right">{row.tradeid}</StyledTableCell>
+              <StyledTableCell align="right">{row.trade_orderID}</StyledTableCell>
+              <StyledTableCell align="right">{row.trade_qty}</StyledTableCell>
+              <StyledTableCell align="right">{row.trade_base_unit}</StyledTableCell>
+              <StyledTableCell align="right">{row.trade_profit}</StyledTableCell>
+              <StyledTableCell align="right">{row.trade_entry_time}</StyledTableCell>
+              <StyledTableCell align="right">{row.trade_entry_time}</StyledTableCell>
+              <StyledTableCell align="right">{row.cum_profits}</StyledTableCell>
+              <StyledTableCell align="right">{row.signal}</StyledTableCell>
+              <StyledTableCell align="right">{row.side}</StyledTableCell>
             </StyledTableRow>
           ))}
         </TableBody>

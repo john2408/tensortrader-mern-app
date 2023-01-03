@@ -23,6 +23,8 @@ const Table = ({chart_id, trade_info, main_screen} ) => {
   let n_rows = values.length -1 ;
   let colors = getColors(n_rows, rowEvenColor, rowOddColor);
 
+  console.log(trade_info)
+
   /*
   let headers = [["<b>EXPENSES</b>"], ["<b>Q1</b>"],
           ["<b>Q2</b>"], ["<b>Q3</b>"], ["<b>Q4</b>"]];
