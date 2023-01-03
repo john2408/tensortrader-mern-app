@@ -2,7 +2,7 @@ const path = require('path');
 require('dotenv').config({ path: path.resolve(__dirname, './.env') });
 
 const express = require('express');
-const backtestRoutes = require('./routes/backtestRoutes');
+const backendRoutes = require('./routes/backendRoutes');
 
 
 //const connectMDB = require('./config/db_client')
@@ -13,7 +13,7 @@ const app = express();
 // move json data from and to react client
 app.use(express.json());
 
-app.use('/api/backtesting', backtestRoutes);
+app.use('/api/backend', backendRoutes);
 
 
 // Server static assets if in production

@@ -2,10 +2,11 @@
   "name": "martinas-react",
   "version": "1.0.0",
   "proxy": {
-    "/api/*":  {
+    "/api/*": {
       "target": "http://127.0.0.1:5000/",
       "secure": false
-  }},
+    }
+  },
   "description": "Martinas Shopping Cart",
   "main": "index.js",
   "scripts": {
@@ -21,6 +22,8 @@
   "author": "John Torres",
   "license": "ISC",
   "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
     "axios": "^0.26.1",
     "concurrently": "^7.1.0",
     "dotenv": "^16.0.0",

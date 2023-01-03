@@ -5,12 +5,15 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 // Reducers 
 import {cartReducer} from './reducers/cartReducers';
 import { getBacktestDetailsReducer, getBacktestsReducer } from './reducers/backtestReducers';
+import { getTradeDetailsReducer, getTradesReducer } from './reducers/tradeReducers';
 
 
 const reducer = combineReducers({
     cart: cartReducer,
     getBacktests: getBacktestsReducer,
     getBacktestDetails: getBacktestDetailsReducer,
+    getTrades: getTradesReducer, 
+    getTradeDetails: getTradeDetailsReducer
 });
 
 const middleware = [thunk];

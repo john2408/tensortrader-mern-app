@@ -5,7 +5,7 @@ export const getBacktests = () => async (dispatch) => {
   try {
     dispatch({ type: actionTypes.GET_BACKTESTS_REQUEST });
 
-    const { data } = await axios.get("/api/backtesting");
+    const { data } = await axios.get("/api/backend/backtest/");
 
     // console.log("I am inside getBacktests Action")
     // console.log(data)
@@ -29,7 +29,7 @@ export const getBacktestDetails = (id) => async (dispatch) => {
   try {
     dispatch({ type: actionTypes.GET_BACKTEST_DETAILS_REQUEST });
 
-    const { data } = await axios.get(`/api/backtesting/${id}`);
+    const { data } = await axios.get(`/api/backend/backtest/${id}`);
 
     console.log("I am inside getBacktestDetails Action");
     console.log(data);
