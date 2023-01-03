@@ -27,7 +27,7 @@ const SideDrawer = ({show, click}) => {
                     <Link to="/" >
                     <i className='fa-solid fa-house'></i>
                     <span>
-                        Home
+                        Backtesting 
                     </span>
                     </Link>
                 </li>
@@ -40,10 +40,10 @@ const SideDrawer = ({show, click}) => {
                     </Link>
                 </li>
                 <li>
-                    <Link to="/" >
+                    <Link to="/trading/" >
                     <i className='fa-solid fa-chart-line'></i>
                     <span>
-                        Backtesting 
+                        Binance Bots 
                     </span>
                     </Link>
                 </li>

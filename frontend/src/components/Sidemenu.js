@@ -16,7 +16,7 @@ const Sidemenu = () => {
                     <Link to="/" className="cart__link">
                     <i className='fa-solid fa-house'></i>
                     <span>
-                        Home
+                        Backtesting
                     </span>
                     </Link>
                 </li>
@@ -29,10 +29,10 @@ const Sidemenu = () => {
                     </Link>
                 </li>
                 <li>
-                    <Link to="/" className="cart__link">
+                    <Link to="/trading/" className="cart__link">
                     <i className='fa-solid fa-chart-line'></i>
                     <span>
-                        Backtesting 
+                        Binance Bots 
                     </span>
                     </Link>
                 </li>
