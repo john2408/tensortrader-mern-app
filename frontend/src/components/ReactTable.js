@@ -76,7 +76,7 @@ const ReactTable = ({chart_id, trade_info}) => {
               <StyledTableCell align="right">{row.trade_base_unit}</StyledTableCell>
               <StyledTableCell align="right">{row.trade_profit}</StyledTableCell>
               <StyledTableCell align="right">{row.trade_entry_time}</StyledTableCell>
-              <StyledTableCell align="right">{row.trade_entry_time}</StyledTableCell>
+              <StyledTableCell align="right">{row.trade_entry_price}</StyledTableCell>
               <StyledTableCell align="right">{row.cum_profits}</StyledTableCell>
               <StyledTableCell align="right">{row.signal}</StyledTableCell>
               <StyledTableCell align="right">{row.side}</StyledTableCell>
