@@ -7,9 +7,33 @@
 
 }
 
+.tablescreen__buttons{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.info__button{
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    font-size: 1rem;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 8px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.info__button:hover{
+    background-color: rgba(19, 35, 177, 0.886);
+    color: azure;
+}
+
 .chart__container{
     width: 100%; 
-    height: 100%
+    height: 100%;
 }
 
 .homescreen__chart{

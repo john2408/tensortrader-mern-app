@@ -34,8 +34,10 @@ function App() {
         <Switch>
           <Route exact path = "/" component={HomeScreen}/>
           <Route exact path = "/trading/" component={TableScreen}/>
+          <Route exact path = "/trading/:id" component={TableScreen}/>
           <Route exact path = "/performance/" component={PerformanceScreen}/>
           <Route exact path = "/backtest/:id" component={ChartScreen}/>
+          
         </Switch>
       
         
